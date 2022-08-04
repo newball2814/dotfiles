@@ -6,9 +6,9 @@ killall mpd; mpd &
 killall sxhkd; sxhkd &
 killall dunst; dunst -print > .cache/dunst.log &
 feh --bg-fill -r -z $HOME/dotfiles/walls &
-redshift -x && redshift -O 4000k &
+# redshift -x && redshift -O 4000k &
 xsetroot -cursor_name left_ptr &
-xsettingsd &
+# xsettingsd &
 # fcitx5 -d &
 killall tint2; tint2 &
 # pgrep bspswallow || bspswallow &

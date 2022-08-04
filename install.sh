@@ -4,7 +4,7 @@ red="\033[1;31m"
 bgreen="\033[1;32m"
 
 # Apps
-APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
+APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd ttf-material-design-icons material-icons-git"
 
 printf "----------------------------------------------------------------------\n"
 printf "${bgreen}Installing software for freshly installed Arch Linux machine.\n"
@@ -38,7 +38,7 @@ case "$choice" in
         sudo pacman -Syu --noconfirm $APP
         git clone https://aur.archlinux.org/yay-git.git && cd yay-git && makepkg -si 
         yay -S picom-jonaburg-git ly
-        systemctl enable ly.service
+        sudo systemctl enable ly.service
         printf "Done!\n"
     ;;
     n*|N*) 
