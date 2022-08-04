@@ -4,7 +4,7 @@ red="\033[1;31m"
 bgreen="\033[1;32m"
 
 # Apps
-APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 nsxiv lf alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd xorg-server"
+APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
 
 printf "----------------------------------------------------------------------\n"
 printf "${bgreen}Installing software for freshly installed Arch Linux machine.\n"
@@ -14,7 +14,7 @@ printf "${red}Consider creating backups of your configs as this will replace all
 read -p "Proceed with the installation? [y/n]:" choice
 
 case "$choice" in
-    y*|Y*) 
+    y*|Y*|*) 
         sleep 2 
         printf "Starting installation...\n"
         sleep 2
@@ -36,10 +36,12 @@ case "$choice" in
         sleep 3
         printf "${bgreen}Installing softwares...\n" 
         sudo pacman -Syu --noconfirm $APP
+        git clone https://aur.archlinux.org/yay-git.git && cd yay-git && makepkg -si 
         yay -S picom-jonaburg-git ly
         systemctl enable ly.service
+        printf "Done!\n"
     ;;
-    n*|N*|*) 
+    n*|N*) 
         printf "${red} Aborting...!\n"
         sleep 1
     ;;
