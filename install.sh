@@ -4,7 +4,7 @@ red="\033[1;31m"
 bgreen="\033[1;32m"
 
 # Apps
-APP="feh vim neovim firefox zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
+APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
 
 # Begin installation 
 printf "----------------------------------------------------------------------\n"
@@ -32,7 +32,7 @@ case "$choice" in
             printf " "
         done
         printf "\n"
-        sleep 5
+        sleep 3
         printf "${bgreen}Installing softwares...\n" 
         sudo pacman -Syu --noconfirm $APP
         git clone https://aur.archlinux.org/yay-git.git && cd yay-git && makepkg -si && cd .. && rm -rf yay-git 
