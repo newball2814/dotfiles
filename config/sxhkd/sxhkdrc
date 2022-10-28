@@ -56,9 +56,3 @@ super + shift + f
 
 super + m 
   bspc desktop -l next
-
-super + alt + e 
-  bash ~/discord-emote-menu/emote.sh -r ~/discord-emote-menu/sample.rofi
-
-super + alt + n
-  bash ~/rofi-network-manager/rofi-network-manager.sh

@@ -4,7 +4,7 @@ red="\033[1;31m"
 bgreen="\033[1;32m"
 
 # Apps
-APP="feh vim neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty emacs pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
+APP="feh neovim firefox pipewire zathura mpd mpv ncmpcpp tint2 alacritty kitty pcmanfm base-devel yay noto-fonts-cjk dunst bspwm sxhkd"
 
 # Begin installation 
 printf "----------------------------------------------------------------------\n"
