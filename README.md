@@ -1,6 +1,6 @@
 # Installation 
 
 ```
-chmod +x install.sh <br>
+chmod +x install.sh 
 ./install.sh 
 ```
