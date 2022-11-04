@@ -34,7 +34,7 @@ case "$choice" in
         printf "\n"
         sleep 3
         printf "${bgreen}Installing softwares...\n" 
-        sudo pacman -Syu --noconfirm $APP
+        sudo pacman -Syyu --noconfirm $APP
         git clone https://aur.archlinux.org/yay-git.git && cd yay-git && makepkg -si && cd .. && rm -rf yay-git 
         yay -S picom-jonaburg-git ly
         sudo systemctl enable ly.service
